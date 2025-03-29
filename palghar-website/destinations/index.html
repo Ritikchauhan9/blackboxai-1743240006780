@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the top tourist destinations in Palghar - from pristine beaches to historic forts, hill stations, and wildlife sanctuaries.">
+    <meta name="keywords" content="Palghar destinations, Dahanu Beach, Kelva Beach, Shirgaon Fort, Jawhar Hill Station, Maharashtra tourism">
+    <title>Destinations in Palghar - Beaches, Forts & Hill Stations | Palghar Tourism</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1B4965',
+                        secondary: '#62B6CB',
+                        accent: '#5FA777',
+                        sand: '#CAA67A',
+                        light: '#F0F7F4'
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        display: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-light">
+    <!-- Header/Navigation -->
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="/" class="text-2xl font-display font-bold text-primary">
+                    Palghar Tourism
+                </a>
+                
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-primary" id="mobile-menu-button">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-6">
+                    <a href="/about.html" class="text-gray-600 hover:text-primary">About</a>
+                    <a href="/destinations" class="text-primary font-semibold">Destinations</a>
+                    <a href="/activities.html" class="text-gray-600 hover:text-primary">Activities</a>
+                    <a href="/travel-guide.html" class="text-gray-600 hover:text-primary">Travel Guide</a>
+                    <a href="/accommodation.html" class="text-gray-600 hover:text-primary">Stay</a>
+                    <a href="/contact.html" class="text-gray-600 hover:text-primary">Contact</a>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div class="md:hidden hidden" id="mobile-menu">
+                <div class="flex flex-col space-y-4 mt-4">
+                    <a href="/about.html" class="text-gray-600 hover:text-primary">About</a>
+                    <a href="/destinations" class="text-primary font-semibold">Destinations</a>
+                    <a href="/activities.html" class="text-gray-600 hover:text-primary">Activities</a>
+                    <a href="/travel-guide.html" class="text-gray-600 hover:text-primary">Travel Guide</a>
+                    <a href="/accommodation.html" class="text-gray-600 hover:text-primary">Stay</a>
+                    <a href="/contact.html" class="text-gray-600 hover:text-primary">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="pt-24 pb-12 bg-primary">
+        <div class="container mx-auto px-4 text-center text-white">
+            <h1 class="font-display text-5xl font-bold mb-4">Destinations in Palghar</h1>
+            <p class="text-xl max-w-3xl mx-auto">
+                Explore the diverse attractions of Palghar - from pristine beaches to historic forts, serene hill stations, and vibrant cultural sites
+            </p>
+        </div>
+    </section>
+
+    <!-- Destination Categories -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Beaches -->
+                <a href="#beaches" class="group">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:-translate-y-2">
+                        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" 
+                             alt="Beaches in Palghar" 
+                             class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-primary group-hover:text-secondary">
+                                <i class="fas fa-umbrella-beach mr-2"></i>Beaches
+                            </h3>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Forts -->
+                <a href="#forts" class="group">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:-translate-y-2">
+                        <img src="https://images.unsplash.com/photo-1599831013079-1a8bac7e5f98" 
+                             alt="Forts in Palghar" 
+                             class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-primary group-hover:text-secondary">
+                                <i class="fas fa-fort-awesome mr-2"></i>Forts
+                            </h3>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Hill Stations -->
+                <a href="#hill-stations" class="group">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:-translate-y-2">
+                        <img src="https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5" 
+                             alt="Hill Stations in Palghar" 
+                             class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-primary group-hover:text-secondary">
+                                <i class="fas fa-mountain mr-2"></i>Hill Stations
+                            </h3>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Religious Sites -->
+                <a href="#religious-sites" class="group">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:-translate-y-2">
+                        <img src="https://images.unsplash.com/photo-1582547094786-63d3088c2f33" 
+                             alt="Religious Sites in Palghar" 
+                             class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-primary group-hover:text-secondary">
+                                <i class="fas fa-om mr-2"></i>Religious Sites
+                            </h3>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Beaches Section -->
+    <section id="beaches" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="font-display text-4xl font-bold text-primary text-center mb-12">
+                Beautiful Beaches
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Dahanu Beach -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" 
+                         alt="Dahanu Beach" 
+                         class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-primary mb-2">Dahanu Beach</h3>
+                        <p class="text-gray-600 mb-4">
+                            Known for its pristine waters, Chikoo orchards, and peaceful ambiance. Perfect for a relaxing weekend getaway.
+                        </p>
+                        <a href="/destinations/dahanu-beach.html" 
+                           class="inline-block bg-primary hover:bg-secondary text-white px-6 py-2 rounded-lg transition duration-300">
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Kelva Beach -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" 
+                         alt="Kelva Beach" 
+                         class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-primary mb-2">Kelva Beach</h3>
+                        <p class="text-gray-600 mb-4">
+                            A serene beach known for its golden sands, clear waters, and historic Kelva Fort nearby.
+                        </p>
+                        <a href="/destinations/kelva-beach.html" 
+                           class="inline-block bg-primary hover:bg-secondary text-white px-6 py-2 rounded-lg transition duration-300">
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Bordi Beach -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" 
+                         alt="Bordi Beach" 
+                         class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-primary mb-2">Bordi Beach</h3>
+                        <p class="text-gray-600 mb-4">
+                            Famous for its white sand, casuarina trees, and traditional Parsi culture.
+                        </p>
+                        <a href="/destinations/bordi-beach.html" 
+                           class="inline-block bg-primary hover:bg-secondary text-white px-6 py-2 rounded-lg transition duration-300">
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Forts Section -->
+    <section id="forts" class="py-16 bg-light">
+        <div class="container mx-auto px-4">
+            <h2 class="font-display text-4xl font-bold text-primary text-center mb-12">
+                Historic Forts
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Shirgaon Fort -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1599831013079-1a8bac7e5f98" 
+                         alt="Shirgaon Fort" 
+                         class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-primary mb-2">Shirgaon Fort</h3>
+                        <p class="text-gray-600 mb-4">
+                            A 16th-century coastal fort offering panoramic views of the Arabian Sea.
+                        </p>
+                        <a href="/destinations/shirgaon-fort.html" 
+                           class="inline-block bg-primary hover:bg-secondary text-white px-6 py-2 rounded-lg transition duration-300">
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Tarapur Fort -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1599831013079-1a8bac7e5f98" 
+                         alt="Tarapur Fort" 
+                         class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-primary mb-2">Tarapur Fort</h3>
+                        <p class="text-gray-600 mb-4">
+                            A historic fort with Portuguese influence, known for its strategic location.
+                        </p>
+                        <a href="/destinations/tarapur-fort.html" 
+                           class="inline-block bg-primary hover:bg-secondary text-white px-6 py-2 rounded-lg transition duration-300">
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Arnala Fort -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1599831013079-1a8bac7e5f98" 
+                         alt="Arnala Fort" 
+                         class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-primary mb-2">Arnala Fort</h3>
+                        <p class="text-gray-600 mb-4">
+                            An island fort with rich history and architectural beauty.
+                        </p>
+                        <a href="/destinations/arnala-fort.html" 
+                           class="inline-block bg-primary hover:bg-secondary text-white px-6 py-2 rounded-lg transition duration-300">
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hill Stations Section -->
+    <section id="hill-stations" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="font-display text-4xl font-bold text-primary text-center mb-12">
+                Serene Hill Stations
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Jawhar -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5" 
+                         alt="Jawhar Hill Station" 
+                         class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-primary mb-2">Jawhar Hill Station</h3>
+                        <p class="text-gray-600 mb-4">
+                            A picturesque hill station known for its tribal culture, waterfalls, and pleasant climate.
+                        </p>
+                        <a href="/destinations/jawhar-hill-station.html" 
+                           class="inline-block bg-primary hover:bg-secondary text-white px-6 py-2 rounded-lg transition duration-300">
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Tungareshwar -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5" 
+                         alt="Tungareshwar Wildlife Sanctuary" 
+                         class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-primary mb-2">Tungareshwar Wildlife Sanctuary</h3>
+                        <p class="text-gray-600 mb-4">
+                            A sanctuary offering trekking trails, wildlife spotting, and natural beauty.
+                        </p>
+                        <a href="/destinations/tungareshwar-wildlife-sanctuary.html" 
+                           class="inline-block bg-primary hover:bg-secondary text-white px-6 py-2 rounded-lg transition duration-300">
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Religious Sites Section -->
+    <section id="religious-sites" class="py-16 bg-light">
+        <div class="container mx-auto px-4">
+            <h2 class="font-display text-4xl font-bold text-primary text-center mb-12">
+                Religious & Cultural Sites
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Vajreshwari Temple -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1582547094786-63d3088c2f33" 
+                         alt="Vajreshwari Temple" 
+                         class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-primary mb-2">Vajreshwari Temple</h3>
+                        <p class="text-gray-600 mb-4">
+                            An ancient temple known for its hot springs and spiritual significance.
+                        </p>
+                        <a href="/destinations/vajreshwari-temple.html" 
+                           class="inline-block bg-primary hover:bg-secondary text-white px-6 py-2 rounded-lg transition duration-300">
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Other Cultural Sites -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1582547094786-63d3088c2f33" 
+                         alt="Cultural Sites" 
+                         class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-primary mb-2">Warli Art Villages</h3>
+                        <p class="text-gray-600 mb-4">
+                            Experience the unique tribal art and culture in traditional Warli villages.
+                        </p>
+                        <a href="/destinations/warli-villages.html" 
+                           class="inline-block bg-primary hover:bg-secondary text-white px-6 py-2 rounded-lg transition duration-300">
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- About -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">About Palghar Tourism</h3>
+                    <p class="text-gray-400">
+                        Discover the beauty and culture of Palghar, Maharashtra's hidden coastal paradise.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/about.html" class="hover:text-white">About</a></li>
+                        <li><a href="/destinations" class="hover:text-white">Destinations</a></li>
+                        <li><a href="/activities.html" class="hover:text-white">Activities</a></li>
+                        <li><a href="/contact.html" class="hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact Us</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><i class="fas fa-phone mr-2"></i> +91 123 456 7890</li>
+                        <li><i class="fas fa-envelope mr-2"></i> info@palghartourism.com</li>
+                    </ul>
+                </div>
+
+                <!-- Social Media -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Palghar Tourism. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>
