@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Plan your perfect trip to Palghar with our comprehensive travel guide. Find detailed itineraries, travel tips, and essential information.">
+    <meta name="keywords" content="Palghar travel guide, Palghar itinerary, travel tips, Maharashtra tourism, weekend getaway">
+    <title>Travel Guide & Itineraries | Palghar Tourism</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1B4965',
+                        secondary: '#62B6CB',
+                        accent: '#5FA777',
+                        sand: '#CAA67A',
+                        light: '#F0F7F4'
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        display: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-light">
+    <!-- Header/Navigation -->
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="/" class="text-2xl font-display font-bold text-primary">
+                    Palghar Tourism
+                </a>
+                
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-primary" id="mobile-menu-button">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-6">
+                    <a href="/about.html" class="text-gray-600 hover:text-primary">About</a>
+                    <a href="/destinations" class="text-gray-600 hover:text-primary">Destinations</a>
+                    <a href="/activities.html" class="text-gray-600 hover:text-primary">Activities</a>
+                    <a href="/travel-guide.html" class="text-primary font-semibold">Travel Guide</a>
+                    <a href="/accommodation.html" class="text-gray-600 hover:text-primary">Stay</a>
+                    <a href="/contact.html" class="text-gray-600 hover:text-primary">Contact</a>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div class="md:hidden hidden" id="mobile-menu">
+                <div class="flex flex-col space-y-4 mt-4">
+                    <a href="/about.html" class="text-gray-600 hover:text-primary">About</a>
+                    <a href="/destinations" class="text-gray-600 hover:text-primary">Destinations</a>
+                    <a href="/activities.html" class="text-gray-600 hover:text-primary">Activities</a>
+                    <a href="/travel-guide.html" class="text-primary font-semibold">Travel Guide</a>
+                    <a href="/accommodation.html" class="text-gray-600 hover:text-primary">Stay</a>
+                    <a href="/contact.html" class="text-gray-600 hover:text-primary">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-20">
+        <div class="h-[60vh] relative overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1" 
+                 alt="Planning your trip to Palghar" 
+                 class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+            <div class="absolute inset-0 flex items-center justify-center">
+                <div class="text-center text-white">
+                    <h1 class="font-display text-5xl md:text-6xl font-bold mb-4">Travel Guide</h1>
+                    <p class="text-xl md:text-2xl max-w-3xl mx-auto px-4">
+                        Plan your perfect trip to Palghar with our comprehensive guides and itineraries
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Planning Tools -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Best Time -->
+                <div class="bg-light rounded-lg p-6 shadow-lg text-center">
+                    <i class="fas fa-calendar-alt text-4xl text-primary mb-4"></i>
+                    <h3 class="text-xl font-bold text-primary mb-2">Best Time to Visit</h3>
+                    <p class="text-gray-600">October to March</p>
+                </div>
+
+                <!-- Getting There -->
+                <div class="bg-light rounded-lg p-6 shadow-lg text-center">
+                    <i class="fas fa-route text-4xl text-primary mb-4"></i>
+                    <h3 class="text-xl font-bold text-primary mb-2">Getting There</h3>
+                    <p class="text-gray-600">Train, Bus, or Car</p>
+                </div>
+
+                <!-- Stay Duration -->
+                <div class="bg-light rounded-lg p-6 shadow-lg text-center">
+                    <i class="fas fa-clock text-4xl text-primary mb-4"></i>
+                    <h3 class="text-xl font-bold text-primary mb-2">Ideal Duration</h3>
+                    <p class="text-gray-600">2-4 Days</p>
+                </div>
+
+                <!-- Budget -->
+                <div class="bg-light rounded-lg p-6 shadow-lg text-center">
+                    <i class="fas fa-wallet text-4xl text-primary mb-4"></i>
+                    <h3 class="text-xl font-bold text-primary mb-2">Budget Range</h3>
+                    <p class="text-gray-600">₹2000-5000 per day</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Suggested Itineraries -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="font-display text-4xl font-bold text-primary text-center mb-12">Suggested Itineraries</h2>
+            
+            <!-- Day Trip -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden mb-8">
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold text-primary mb-4">Day Trip</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="bg-primary text-white rounded-full w-8 h-8 flex items-center justify-center mt-1 flex-shrink-0">
+                                <span>1</span>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-bold text-gray-800">Morning (8 AM - 12 PM)</h4>
+                                <p class="text-gray-600">Visit Dahanu Beach for swimming and water activities</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-primary text-white rounded-full w-8 h-8 flex items-center justify-center mt-1 flex-shrink-0">
+                                <span>2</span>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-bold text-gray-800">Afternoon (12 PM - 4 PM)</h4>
+                                <p class="text-gray-600">Explore Chikoo farms and enjoy local cuisine</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-primary text-white rounded-full w-8 h-8 flex items-center justify-center mt-1 flex-shrink-0">
+                                <span>3</span>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-bold text-gray-800">Evening (4 PM - 8 PM)</h4>
+                                <p class="text-gray-600">Visit Shirgaon Fort and watch sunset</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Weekend Getaway -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden mb-8">
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold text-primary mb-4">Weekend Getaway (2 Days)</h3>
+                    <div class="space-y-6">
+                        <!-- Day 1 -->
+                        <div>
+                            <h4 class="font-bold text-xl text-gray-800 mb-4">Day 1</h4>
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <div class="bg-secondary text-white rounded-full w-8 h-8 flex items-center justify-center mt-1 flex-shrink-0">
+                                        <span>1</span>
+                                    </div>
+                                    <div class="ml-4">
+                                        <h5 class="font-bold text-gray-800">Morning</h5>
+                                        <p class="text-gray-600">Arrive and check-in to accommodation</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="bg-secondary text-white rounded-full w-8 h-8 flex items-center justify-center mt-1 flex-shrink-0">
+                                        <span>2</span>
+                                    </div>
+                                    <div class="ml-4">
+                                        <h5 class="font-bold text-gray-800">Afternoon</h5>
+                                        <p class="text-gray-600">Beach activities at Dahanu</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="bg-secondary text-white rounded-full w-8 h-8 flex items-center justify-center mt-1 flex-shrink-0">
+                                        <span>3</span>
+                                    </div>
+                                    <div class="ml-4">
+                                        <h5 class="font-bold text-gray-800">Evening</h5>
+                                        <p class="text-gray-600">Explore local markets and dinner</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Day 2 -->
+                        <div>
+                            <h4 class="font-bold text-xl text-gray-800 mb-4">Day 2</h4>
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <div class="bg-secondary text-white rounded-full w-8 h-8 flex items-center justify-center mt-1 flex-shrink-0">
+                                        <span>1</span>
+                                    </div>
+                                    <div class="ml-4">
+                                        <h5 class="font-bold text-gray-800">Morning</h5>
+                                        <p class="text-gray-600">Visit Jawhar Hill Station</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="bg-secondary text-white rounded-full w-8 h-8 flex items-center justify-center mt-1 flex-shrink-0">
+                                        <span>2</span>
+                                    </div>
+                                    <div class="ml-4">
+                                        <h5 class="font-bold text-gray-800">Afternoon</h5>
+                                        <p class="text-gray-600">Explore Warli art villages</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="bg-secondary text-white rounded-full w-8 h-8 flex items-center justify-center mt-1 flex-shrink-0">
+                                        <span>3</span>
+                                    </div>
+                                    <div class="ml-4">
+                                        <h5 class="font-bold text-gray-800">Evening</h5>
+                                        <p class="text-gray-600">Return journey</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Essential Travel Tips -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="font-display text-4xl font-bold text-primary text-center mb-12">Essential Travel Tips</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Transportation -->
+                <div class="bg-light rounded-lg p-6 shadow-lg">
+                    <i class="fas fa-train text-4xl text-primary mb-4"></i>
+                    <h3 class="text-xl font-bold text-primary mb-4">Transportation</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li><i class="fas fa-check text-accent mr-2"></i>Regular trains from Mumbai</li>
+                        <li><i class="fas fa-check text-accent mr-2"></i>ST buses available</li>
+                        <li><i class="fas fa-check text-accent mr-2"></i>Local auto-rickshaws</li>
+                        <li><i class="fas fa-check text-accent mr-2"></i>Car rental options</li>
+                    </ul>
+                </div>
+
+                <!-- Accommodation -->
+                <div class="bg-light rounded-lg p-6 shadow-lg">
+                    <i class="fas fa-bed text-4xl text-primary mb-4"></i>
+                    <h3 class="text-xl font-bold text-primary mb-4">Accommodation</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li><i class="fas fa-check text-accent mr-2"></i>Book in advance on weekends</li>
+                        <li><i class="fas fa-check text-accent mr-2"></i>Various budget options</li>
+                        <li><i class="fas fa-check text-accent mr-2"></i>Beach resorts available</li>
+                        <li><i class="fas fa-check text-accent mr-2"></i>Homestay experiences</li>
+                    </ul>
+                </div>
+
+                <!-- Local Tips -->
+                <div class="bg-light rounded-lg p-6 shadow-lg">
+                    <i class="fas fa-lightbulb text-4xl text-primary mb-4"></i>
+                    <h3 class="text-xl font-bold text-primary mb-4">Local Tips</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li><i class="fas fa-check text-accent mr-2"></i>Carry cash</li>
+                        <li><i class="fas fa-check text-accent mr-2"></i>Try local cuisine</li>
+                        <li><i class="fas fa-check text-accent mr-2"></i>Respect local culture</li>
+                        <li><i class="fas fa-check text-accent mr-2"></i>Early morning visits best</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Travel Resources -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="font-display text-4xl font-bold text-primary text-center mb-12">Travel Resources</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Emergency Contacts -->
+                <div class="bg-white rounded-lg p-6 shadow-lg">
+                    <h3 class="text-xl font-bold text-primary mb-4">Emergency Contacts</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li><i class="fas fa-phone-alt mr-2 text-primary"></i>Police: 100</li>
+                        <li><i class="fas fa-ambulance mr-2 text-primary"></i>Ambulance: 108</li>
+                        <li><i class="fas fa-hospital mr-2 text-primary"></i>Hospital: +91 xxx xxx xxxx</li>
+                        <li><i class="fas fa-info-circle mr-2 text-primary"></i>Tourist Help: +91 xxx xxx xxxx</li>
+                    </ul>
+                </div>
+
+                <!-- Useful Links -->
+                <div class="bg-white rounded-lg p-6 shadow-lg">
+                    <h3 class="text-xl font-bold text-primary mb-4">Useful Links</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li><i class="fas fa-train mr-2 text-primary"></i>Indian Railways Website</li>
+                        <li><i class="fas fa-bus mr-2 text-primary"></i>MSRTC Bus Service</li>
+                        <li><i class="fas fa-cloud mr-2 text-primary"></i>Weather Updates</li>
+                        <li><i class="fas fa-map-marked-alt mr-2 text-primary"></i>Google Maps</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- About -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">About Palghar Tourism</h3>
+                    <p class="text-gray-400">
+                        Discover the beauty and culture of Palghar, Maharashtra's hidden coastal paradise.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/about.html" class="hover:text-white">About</a></li>
+                        <li><a href="/destinations" class="hover:text-white">Destinations</a></li>
+                        <li><a href="/activities.html" class="hover:text-white">Activities</a></li>
+                        <li><a href="/contact.html" class="hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact Us</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><i class="fas fa-phone mr-2"></i> +91 123 456 7890</li>
+                        <li><i class="fas fa-envelope mr-2"></i> info@palghartourism.com</li>
+                    </ul>
+                </div>
+
+                <!-- Social Media -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Palghar Tourism. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>
