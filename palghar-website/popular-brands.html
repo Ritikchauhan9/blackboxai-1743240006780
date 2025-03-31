@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popular Brands - Palghar Tourism</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        h1, h2, h3, .logo {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .header {
+            background-color: rgba(0, 0, 0, 0.7);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: background-color 0.3s;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #fff;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-item {
+            margin-left: 2rem;
+        }
+        
+        .nav-link {
+            color: #fff;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .brands-section {
+            background-color: #f8f9fa;
+            padding: 80px 0;
+        }
+
+        .brands-grid {
+            display: grid;
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .brand-category {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .category-title {
+            color: #333;
+            margin-bottom: 25px;
+            font-size: 1.5rem;
+            border-bottom: 2px solid #ff6b6b;
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        .brand-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .brand-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .brand-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        .brand-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255,107,107,0.95);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            color: white;
+            padding: 20px;
+        }
+
+        .brand-card:hover .brand-overlay {
+            opacity: 1;
+        }
+
+        .brand-btn {
+            margin-top: 15px;
+            padding: 8px 20px;
+            background: white;
+            color: #ff6b6b;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .brand-btn:hover {
+            background: #333;
+            color: white;
+        }
+
+        .footer {
+            background-color: #222;
+            color: #fff;
+            padding: 4rem 0 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .brands-grid {
+                gap: 20px;
+            }
+            
+            .brand-category {
+                padding: 20px;
+            }
+
+            .nav-menu {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav-container">
+                <a href="index.html" class="logo">Palghar<span style="color: #ff6b6b;">Tourism</span></a>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="destinations/index.html" class="nav-link">Destinations</a></li>
+                    <li class="nav-item"><a href="activities.html" class="nav-link">Activities</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" style="height: 60vh; background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/00/65/e9/bordi-beach.jpg?w=1200&h=1200&s=1') no-repeat center center/cover; display: flex; align-items: center; justify-content: center; text-align: center; color: white; margin-top: 76px;">
+            <div class="container">
+                <h1 style="font-size: 3.5rem; margin-bottom: 1rem;">Popular Brands</h1>
+                <p style="font-size: 1.5rem;">Discover popular brands in Palghar</p>
+            </div>
+        </section>
+
+        <section class="brands-section">
+            <div class="container">
+                <div class="brands-grid">
+                    <!-- Food & Beverages -->
+                    <div class="brand-category">
+                        <h3 class="category-title">Food & Beverages</h3>
+                        <div class="brand-cards">
+                            <div class="brand-card">
+                                <div class="brand-logo" style="background: url('https://soufflefoodworks.com/wp-content/uploads/2019/01/logo-1.png') center/cover no-repeat; height: 100px;"></div>
+                                <h4>Souffle Cake Shop</h4>
+                                <p>Cake Shop</p>
+                                <div class="brand-overlay">
+                                    <p>Open daily: 08 AM - 11 PM</p>
+                                    <a href="https://soufflefoodworks.com/menu" class="brand-btn" target="_blank">Visit Site</a>
+                                </div>
+                            </div>
+                            <div class="brand-card">
+                                <div class="brand-logo" style="background: url('https://lh3.googleusercontent.com/p/AF1QipO8mcfOH4Abgr_WjuNdEw8RaZ4iyT_cFaahP2pZ=s680-w680-h510') center/cover no-repeat; height: 100px;"></div>
+                                <h4>Domino's Pizza</h4>
+                                <p>Pizza Restaurant</p>
+                                <div class="brand-overlay">
+                                    <p>Open daily: 11 AM - 11 PM</p>
+                                    <a href="https://www.dominos.co.in/" class="brand-btn" target="_blank">Visit Site</a>
+                                </div>
+                            </div>
+                            <div class="brand-card">
+                                <div class="brand-logo" style="background: url('https://lh3.googleusercontent.com/p/AF1QipMnbN7tSaYwQlU9YLv_4JtsWqt15vDAVKY64WUf=s680-w680-h510') center/cover no-repeat; height: 100px;"></div>
+                                <h4>Janta Sweets</h4>
+                                <p>Indian Sweets & Namkeen</p>
+                                <div class="brand-overlay">
+                                    <p>Open daily: 11 AM - 11 PM</p>
+                                    <a href="https://g.co/kgs/Wbm6f2V" class="brand-btn" target="_blank">Visit Site</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Shopping -->
+                    <div class="brand-category">
+                        <h3 class="category-title">Shopping</h3>
+                        <div class="brand-cards">
+                            <div class="brand-card">
+                                <div class="brand-logo" style="background: url('https://lh3.googleusercontent.com/p/AF1QipMA9iyWMpYixglgMQscB3auz9gyt9TaPAr2EhGv=s680-w680-h510') center/cover no-repeat; height: 100px;"></div>
+                                <h4>Reliance Superstore</h4>
+                                <p>Supermarket</p>
+                                <div class="brand-overlay">
+                                    <p>Open daily: 9 AM - 10 PM</p>
+                                    <a href="https://www.jiomart.com/" class="brand-btn" target="_blank">Visit Site</a>
+                                </div>
+                            </div>
+                            <div class="brand-card">
+                                <div class="brand-logo" style="background: url('https://jobquestjourney.com/wp-content/uploads/2024/08/Zudio-job.jpg') center/cover no-repeat; height: 100px;"></div>
+                                <h4>Zudio</h4>
+                                <p>Men & Women Clothing Store</p>
+                                <div class="brand-overlay">
+                                    <p>Opening Soon</p>
+                                    <a href="https://www.zudio.com/" class="brand-btn" target="_blank">Visit Site</a>
+                                </div>
+                            </div>
+                            <div class="brand-card">
+                                <div class="brand-logo" style="background: url('https://lh3.googleusercontent.com/p/AF1QipPx9nLboARK1Y-tpVXfXCHpibY5jFvrm11xpJIm=s680-w680-h510') center/cover no-repeat; height: 100px;"></div>
+                                <h4>B Mart</h4>
+                                <p>Small Supermarket</p>
+                                <div class="brand-overlay">
+                                    <p>Open daily: 9 AM - 10 PM</p>
+                                    <a href="https://g.co/kgs/CivDH7Z" class="brand-btn" target="_blank">Visit Site</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Support Us -->
+                    <div class="brand-category">
+                        <h3 class="category-title" style="text-align: center;">Support us</h3>
+                        <div class="brand-cards">
+                            <div class="brand-card">
+                                <div class="brand-logo" style="background: url('https://cdn-icons-png.flaticon.com/512/3176/3176298.png') center/contain no-repeat; height: 100px;"></div>
+                                <h4>Support Us</h4>
+                                <p>Help us improve by sharing information about local brands</p>
+                                <div class="brand-overlay">
+                                    <p>Fill out our form</p>
+                                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfEQe61iV6tuMG0PKpO3b17eEqJdumfpP7HgEUYuSJi1335Hg/viewform" class="brand-btn" target="_blank">Support Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container" style="text-align: center;">
+            <p>&copy; 2024 Palghar Tourism. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 50) {
+                header.style.backgroundColor = 'rgba(0, 0, 0, 0.9)';
+            } else {
+                header.style.backgroundColor = 'rgba(0, 0, 0, 0.7)';
+            }
+        });
+    </script>
+</body>
+</html>
